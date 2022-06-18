@@ -1,0 +1,5 @@
+[] remove jquery
+[] remove bootstrap
+[] add more comments
+[] add additonal sites
+[] add more todos?

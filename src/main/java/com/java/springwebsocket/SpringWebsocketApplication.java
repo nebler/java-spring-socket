@@ -1,4 +1,4 @@
-package com.javanebelr.springwebsocket;
+package com.java.springwebsocket;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
