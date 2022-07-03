@@ -6,12 +6,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.util.HtmlUtils;
 
 @Controller
-public class GreetingController {
+public class GoodbyeController {
 
-    @MessageMapping("/hello")
-    @SendTo("/topic/greetings")
-    public Greeting greet(HelloMessage message) throws InterruptedException {
-        return new Greeting("Hey was geht, " +
-                HtmlUtils.htmlEscape(message.getName()));
+    @MessageMapping("/goodbye")
+    @SendTo("/topic/goodbyes")
+    public Goodbye goodbye(Goodbye message) throws InterruptedException {
+        return new Goodbye("Hey was geht, " +
+                HtmlUtils.htmlEscape(message.getMessage()), true);
     }
 }

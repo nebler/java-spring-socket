@@ -21,6 +21,10 @@ function connect() {
         stompClient.subscribe('/topic/greetings', function (greeting) {
             showGreeting(JSON.parse(greeting.body));
         });
+        console.log('goodbye')
+         stompClient.subscribe('/topic/goodbye', function (greeting) {
+                    showGreeting(JSON.parse(goodbye.body));
+         });
     });
 }
 
@@ -39,6 +43,11 @@ function sendName() {
 function showGreeting(message) {
     $("#greetings").append("<tr><td>" + message.message + "</td></tr>");
 }
+
+function showGoodbye(message) {
+    $("#goodbye").append("<tr><td>" + message.message "</td></tr>");
+}
+
 
 $(function () {
     $("form").on('submit', function (e) {
