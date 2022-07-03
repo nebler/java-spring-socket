@@ -1,5 +1,4 @@
-package com.java.springwebsocket;
-
+package com.dailycodebuffer.websocket;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,5 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class HelloMessage {
+
     private String name;
 }

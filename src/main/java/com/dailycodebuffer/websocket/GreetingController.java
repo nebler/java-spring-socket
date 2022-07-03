@@ -1,4 +1,4 @@
-package com.java.springwebsocket;
+package com.dailycodebuffer.websocket;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -10,7 +10,9 @@ public class GreetingController {
 
     @MessageMapping("/hello")
     @SendTo("/topic/greetings")
-    public Greeting greet(HelloMessage message) {
-        return new Greeting("hello, " + HtmlUtils.htmlEscape(message.getName()));
+    public Greeting greet(HelloMessage message) throws InterruptedException {
+        Thread.sleep(2000);
+        return new Greeting("Hello, " +
+                HtmlUtils.htmlEscape(message.getName()));
     }
 }
